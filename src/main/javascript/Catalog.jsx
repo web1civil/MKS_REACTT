@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Filter from './Filter';
 import Product from './Product';
+import LazyComponent from './LazyComponent';
 
 const Catalog = () => {
     const [products, setProducts] = useState([
@@ -30,6 +31,8 @@ const Catalog = () => {
                     <Product key={product.id} {...product} />
                 ))}
             </div>
+            <VirtualElements />
+            <LazyComponent />
         </div>
     );
 };

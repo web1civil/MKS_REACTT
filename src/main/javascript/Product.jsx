@@ -4,8 +4,8 @@ const Product = ({ name, price, category }) => {
     return (
         <div>
             <h3>{name}</h3>
-            <p>Price: {price}</p>
-            <p>Category: {category}</p>
+            {price > 0 && <p>Price: {price}</p>}
+            {category && <p>Category: {category}</p>}
         </div>
     );
 };
